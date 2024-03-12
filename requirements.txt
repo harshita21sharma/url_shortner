@@ -1,0 +1,4 @@
+shortuuid
+ipdb
+django-cors-headers
+django-extensions
