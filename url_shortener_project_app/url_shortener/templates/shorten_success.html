@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorten URL Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Successfully Shortened</h1>
+        <p>Shortened URL: {{ short_alias }}</p>
+        <div class="btn-container">
+            <a href="{% url 'dashboard' %}" class="btn">Go to Dashboard</a>
+            <a href="{% url 'logout' %}" class="btn logout-btn">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
